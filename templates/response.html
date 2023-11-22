@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random URL Response</title>
+</head>
+<body>
+    <h1>Random URL Response</h1>
+    <p>{{ response_text }}</p>
+
+<h1>database entries</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>URL</th>
+            <th>Status Code</th>
+        </tr>
+        {% for result in results %}
+            <tr>
+                <td>{{ result[0] }}</td>
+                <td>{{ result[1] }}</td>
+                <td>{{ result[2] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+
+</body>
+</html>
