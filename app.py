@@ -58,7 +58,8 @@ def hello():
         cursor.close()
 
     # Render the response in an HTML template
-    return render_template('./response.html', response_text=response_text,results=results)
+    server_ip = request.host.split(':')[0]
+    return render_template('./response.html', response_text=response_text,results=results, server_ip=server_ip)
 
 if __name__ == '__main__':
     app.run(port=80,debug=True)
