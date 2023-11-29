@@ -1,7 +1,7 @@
 CREATE DATABASE IF NOT EXISTS responses;
 
 -- Check if the user 'pyapp'@'localhost' exists before creating
-CREATE USER IF NOT EXISTS 'pyapp'@'localhost' IDENTIFIED BY '123_abcde';
+CREATE USER IF NOT EXISTS 'pyapp'@'%' IDENTIFIED BY '123_abcde';
 
 -- Grant privileges only if the user was just created or does not have them
 GRANT ALL PRIVILEGES ON responses.* TO 'pyapp'@'localhost' WITH GRANT OPTION;
