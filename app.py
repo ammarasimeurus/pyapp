@@ -7,7 +7,7 @@ import mysql.connector
 app = Flask(__name__)
 
 # MySQL configurations
-app.config['MYSQL_HOST'] = '10.0.2.162'
+app.config['MYSQL_HOST'] = '10.0.2.82'
 app.config['MYSQL_USER'] = 'pyapp'
 app.config['MYSQL_PASSWORD'] = '123_abcde'
 app.config['MYSQL_DATABASE'] = 'responses'
@@ -62,5 +62,5 @@ def hello():
     return render_template('./response.html', response_text=response_text,results=results, server_ip=server_ip)
 
 if __name__ == '__main__':
-    app.run(port=80,debug=True)
+    app.run(host='0.0.0.0',port=80,debug=True)
 
