@@ -7,7 +7,7 @@ import mysql.connector
 app = Flask(__name__)
 
 # MySQL configurations
-app.config['MYSQL_HOST'] = '10.0.1.237'
+app.config['MYSQL_HOST'] = '10.0.1.38'
 app.config['MYSQL_USER'] = 'pyapp'
 app.config['MYSQL_PASSWORD'] = '123_abcde'
 app.config['MYSQL_DATABASE'] = 'responses'
